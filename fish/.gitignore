@@ -1,0 +1,7 @@
+completions
+functions/*
+!functions/nvm.fish
+!functions/_check_nvm.fish
+fish_variables
+conf.d
+fundle
