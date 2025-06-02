@@ -1,0 +1,104 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen || ProjectPanel || (Terminal && vim_operator == none && !VimWaiting)",
+    "bindings": {
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "Lazygit", "reveal_target": "center" }
+      ],
+      "-": ["task::Spawn", { "task_name": "Oil", "reveal_target": "center" }],
+      "space e": "project_panel::ToggleFocus",
+      "space t": "terminal_panel::ToggleFocus"
+    }
+  },
+  // {
+  //   "bindings": {
+  //     "ctrl-j": "menu::SelectPrevious",
+  //     "ctrl-k": "menu::SelectNext",
+  //   }
+  // },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "ctrl-j": "editor::ContextMenuNext",
+      "ctrl-k": "editor::ContextMenuPrevious"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-]": "pane::ActivateNextItem",
+      "ctrl-[": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      // "j k": ["workspace::SendKeystrokes", "escape"],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "shift-ctrl-h": "pane::SplitLeft",
+      "shift-ctrl-j": "pane::SplitDown",
+      "shift-ctrl-k": "pane::SplitUp",
+      "shift-ctrl-l": "pane::SplitRight",
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "Lazygit", "reveal_target": "center" }
+      ],
+      "-": ["task::Spawn", { "task_name": "Oil", "reveal_target": "center" }],
+      "space e": "project_panel::ToggleFocus",
+      "space t": "terminal_panel::ToggleFocus",
+      "space a c": "editor::ToggleCodeActions"
+    }
+  },
+  {
+    "context": "ProjectPanel && !VimWaiting",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "cmd-a": "project_panel::NewFile",
+      "cmd-D": "project_panel::Trash",
+      "cmd-R": "project_panel::RemoveFromProject",
+      "cmd-t": "workspace::OpenInTerminal",
+      "cmd-y": "project_panel::Copy",
+      "cmd-p": "project_panel::Paste",
+      "cmd-x": "project_panel::Cut",
+      "cmd-r": "project_panel::Rename"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "g s a": ["vim::PushAddSurrounds", {}]
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "shift-h": "pane::SplitLeft",
+      "shift-j": "pane::SplitDown",
+      "shift-k": "pane::SplitUp",
+      "shift-l": "pane::SplitRight",
+      "cmd-j": "workspace::ToggleZoom",
+      "cmd-k": "workspace::ToggleBottomDock"
+    }
+  }
+]
