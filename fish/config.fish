@@ -47,4 +47,18 @@ alias gr="git rebase"
 alias gri="git rebase -i"
 alias gs="git switch"
 alias gsc="git switch"
-alias zed="zeditor"
+
+# Added by Windsurf
+fish_add_path /Users/saidgeek/.codeium/windsurf/bin
+
+set -gx CARGO_TARGET_DIR /Users/saidgeek/rust_target
+
+set -U LIBRARY_PATH (brew --prefix)/lib
+set -U fish_user_paths (brew --prefix)/bin $fish_user_paths
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+# Go bin path
+set --export PATH "$HOME/go/bin" $PATH
