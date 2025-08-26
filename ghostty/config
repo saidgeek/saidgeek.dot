@@ -1,0 +1,23 @@
+title = ""
+
+font-family = "JetBrainsMono Nerd Font Mono"
+font-family-bold = true
+font-size = 12
+
+theme = catppuccin-mocha
+window-padding-color = extend
+
+# Keybindings
+
+keybind = alt+z=toggle_split_zoom
+
+keybind = alt+v=new_split:right
+keybind = alt+-=new_split:down
+
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
+keybind = alt+l=goto_split:right
+
+# clear terminal
+keybind = cmd+k=clear_screen
