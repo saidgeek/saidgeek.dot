@@ -4,6 +4,16 @@ end
 
 set -g fish_greeting
 
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+# Go bin path
+set --export PATH "$HOME/go/bin" $PATH
+
+# Cargp bin path
+set --export PATH "$HOME/.cargo/bin" $PATH
+
 starship init fish | source
 fnm env --use-on-cd | source
 zoxide init fish | source
@@ -55,10 +65,3 @@ set -gx CARGO_TARGET_DIR /Users/saidgeek/rust_target
 
 set -U LIBRARY_PATH (brew --prefix)/lib
 set -U fish_user_paths (brew --prefix)/bin $fish_user_paths
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
-
-# Go bin path
-set --export PATH "$HOME/go/bin" $PATH
