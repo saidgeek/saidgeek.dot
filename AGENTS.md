@@ -5,6 +5,10 @@
 - Test config files by symlinking to actual locations (see README.md)
 - Validate Lua syntax: `lua -e "dofile('nvim/init.lua')"`
 - Check stylua formatting: `stylua --check nvim/`
+- Install dotfiles: `./install.sh` (includes error handling and logging)
+- Restore from backup: `./restore.sh --latest` or `./restore.sh --interactive`
+- Check installation log: `cat ~/.dotfiles-install.log`
+- Verify syntax: `bash -n install.sh` or `bash -n restore.sh`
 
 ## Code Style Guidelines
 
